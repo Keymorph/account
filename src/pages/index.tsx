@@ -1,4 +1,10 @@
+import { useSession } from "next-auth/react";
+
 export default function Index() {
+  const { data } = useSession();
+
+  console.log(data);
+
   return (
     <div
       className={
@@ -6,9 +12,7 @@ export default function Index() {
       }
     >
       <h1
-        className={
-          "absolute w-4/5 md:w-1/2 font-bold text-center text-primary text-2xl cursor-grab z-10"
-        }
+        className={"absolute font-bold text-center text-primary-light text-2xl"}
       >
         Soon™
       </h1>
